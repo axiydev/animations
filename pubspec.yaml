@@ -29,6 +29,7 @@ flutter:
   assets:
     - assets/lottie/lost_connection.json
     - assets/images/
+    - assets/database/data.json
 
   # fonts:
   #   - family: Schyler

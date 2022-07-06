@@ -1,7 +1,10 @@
-import 'package:animations/advance_animations_page/advance_animations_page.dart';
-import 'package:animations/animations_page/animations_page.dart';
-import 'package:animations/avarage_animations_page/avarage_animations_page.dart';
+import 'package:animations/pages/advance_animations_page/advance_animations_page.dart';
+import 'package:animations/pages/animations_page/animations_page.dart';
+import 'package:animations/pages/avarage_animations_page/avarage_animations_page.dart';
 import 'package:animations/pages/basic_animations_page.dart';
+import 'package:animations/pages/bounce_animation/bounce_animation_page.dart';
+import 'package:animations/pages/hinge/hinge_page.dart';
+import 'package:animations/pages/three_flip/three_flip_page.dart';
 /*
 Created by Axmadjon Isaqov on 14:17:17 04.07.2022
 © 2022 
@@ -28,9 +31,12 @@ class MyApp extends StatelessWidget {
         BasicAnimationsPage.path: (context) => const BasicAnimationsPage(),
         AvarageAnimationsPage.path: (context) => const AvarageAnimationsPage(),
         AdvanceAnimationsPage.path: (context) => const AdvanceAnimationsPage(),
-        AnimationsPage.path: (context) => const AnimationsPage()
+        AnimationsPage.path: (context) => const AnimationsPage(),
+        BounceAnimationPage.path: (context) => const BounceAnimationPage(),
+        ThreeDFlipPage.path: (context) => const ThreeDFlipPage(),
+        HingeAnimationsPage.path: (context) => const HingeAnimationsPage()
       },
-      initialRoute: AnimationsPage.path,
+      initialRoute: HingeAnimationsPage.path,
     );
   }
 }

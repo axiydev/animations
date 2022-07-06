@@ -1,4 +1,7 @@
 import 'package:animations/consts/app_assets.dart';
+import 'package:animations/models/common_model.dart';
+import 'package:animations/utils/get_data.dart';
+import 'package:animations/utils/log_stdout.dart';
 import 'package:flutter/material.dart';
 
 class AnimationsPage extends StatefulWidget {
@@ -14,9 +17,16 @@ class _AnimationsPageState extends State<AnimationsPage>
   late AnimationController _controller;
   late Tween<Offset> _myTween;
   late Animation<Offset>? _animation;
+  late CommonModel? _commonModel;
+  void loadData() async {
+    _commonModel = await LoaderDb.loadMoreJson(context);
+    log(_commonModel!.result.last.name!);
+  }
+
   @override
   void initState() {
     super.initState();
+    // loadData();
     _controller =
         AnimationController(vsync: this, duration: const Duration(seconds: 1));
     _myTween =
