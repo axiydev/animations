@@ -71,7 +71,9 @@ class _HingeAnimationsPageState extends State<HingeAnimationsPage>
                                     opacity: _animationOpacity.value!,
                                     child: Image.asset(
                                       MyImages.wild,
-                                      width: 100,
+                                      width: 200,
+                                      height: 200,
+                                      fit: BoxFit.cover,
                                     ),
                                   );
                                 }),

@@ -2,6 +2,7 @@ import 'package:animations/pages/advance_animations_page/advance_animations_page
 import 'package:animations/pages/animations_page/animations_page.dart';
 import 'package:animations/pages/avarage_animations_page/avarage_animations_page.dart';
 import 'package:animations/pages/basic_animations_page.dart';
+import 'package:animations/pages/blur_page/blur_page.dart';
 import 'package:animations/pages/bounce_animation/bounce_animation_page.dart';
 import 'package:animations/pages/hinge/hinge_page.dart';
 import 'package:animations/pages/three_flip/three_flip_page.dart';
@@ -34,9 +35,10 @@ class MyApp extends StatelessWidget {
         AnimationsPage.path: (context) => const AnimationsPage(),
         BounceAnimationPage.path: (context) => const BounceAnimationPage(),
         ThreeDFlipPage.path: (context) => const ThreeDFlipPage(),
-        HingeAnimationsPage.path: (context) => const HingeAnimationsPage()
+        HingeAnimationsPage.path: (context) => const HingeAnimationsPage(),
+        BlurPage.path: (context) => BlurPage.show!,
       },
-      initialRoute: HingeAnimationsPage.path,
+      initialRoute: BlurPage.path,
     );
   }
 }
