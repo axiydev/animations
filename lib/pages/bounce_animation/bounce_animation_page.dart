@@ -1,4 +1,5 @@
 import 'package:animations/consts/app_assets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 //Bounce
@@ -52,19 +53,54 @@ class _BounceAnimationPageState extends State<BounceAnimationPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: SafeArea(
-        child: Center(
-            child: AnimatedBuilder(
-          animation: _controller,
-          builder: (context, child) => Container(
-              padding: EdgeInsets.only(
-                  bottom: _animation!.value.width,
-                  right: _animation!.value.height),
+      body: Stack(
+        children: [
+          SafeArea(
+            child: Center(
+                child: AnimatedBuilder(
+              animation: _controller,
+              builder: (context, child) => Container(
+                  padding: EdgeInsets.only(
+                      bottom: _animation!.value.width,
+                      right: _animation!.value.height),
+                  child: Image.asset(
+                    MyImages.wild,
+                    width: 100,
+                  )),
+            )),
+          ),
+          CupertinoContextMenu(
+              actions: [
+                CupertinoContextMenuAction(
+                  child: const Icon(Icons.heart_broken),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                CupertinoContextMenuAction(
+                  child: const Icon(Icons.heart_broken),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                CupertinoContextMenuAction(
+                  child: const Icon(Icons.heart_broken),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                CupertinoContextMenuAction(
+                  child: const Icon(Icons.heart_broken),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
               child: Image.asset(
                 MyImages.wild,
-                width: 100,
-              )),
-        )),
+                width: 250,
+              ))
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

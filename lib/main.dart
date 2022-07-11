@@ -1,3 +1,9 @@
+/*
+Created by Axmadjon Isaqov on 14:17:17 04.07.2022
+© 2022 
+*/
+///[@axi_dev]
+///Mavzu: Animations
 import 'package:animations/pages/advance_animations_page/advance_animations_page.dart';
 import 'package:animations/pages/animated_wid/animated_wid_page.dart';
 import 'package:animations/pages/animations_page/animations_page.dart';
@@ -7,12 +13,6 @@ import 'package:animations/pages/blur_page/blur_page.dart';
 import 'package:animations/pages/bounce_animation/bounce_animation_page.dart';
 import 'package:animations/pages/hinge/hinge_page.dart';
 import 'package:animations/pages/three_flip/three_flip_page.dart';
-/*
-Created by Axmadjon Isaqov on 14:17:17 04.07.2022
-© 2022 
-*/
-///[@axi_dev]
-///Mavzu: Animations
 import 'package:flutter/material.dart';
 
 void main() {
