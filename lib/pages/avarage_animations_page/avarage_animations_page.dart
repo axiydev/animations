@@ -11,14 +11,26 @@ class AvarageAnimationsPage extends StatefulWidget {
 }
 
 class _AvarageAnimationsPageState extends State<AvarageAnimationsPage> {
+  late Map _args;
+  @override
+  void didChangeDependencies() {
+    _args = ModalRoute.of(context)!.settings.arguments as Map;
+    super.didChangeDependencies();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        body: SafeArea(
-          child: Center(
-              child: Lottie.asset(MyAnimation.lost_connection, width: 200)),
-        ));
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Center(
+            child: Lottie.asset(MyAnimation.lost_connection, width: 200)),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: Text(_args['args'] ?? 'hello'),
+      ),
+    );
   }
 }
 

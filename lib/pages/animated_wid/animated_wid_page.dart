@@ -1,3 +1,4 @@
+import 'package:animations/pages/avarage_animations_page/avarage_animations_page.dart';
 import 'package:animations/wids/custom_animated.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,13 @@ class _CustomAnimatedPageState extends State<CustomAnimatedPage>
           animation: _animationController!,
           child: const CustomWid(),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, AvarageAnimationsPage.path,
+              arguments: {'args': 'salom 123'});
+        },
+        child: const Icon(Icons.play_arrow),
       ),
     );
   }
