@@ -1,4 +1,6 @@
 import 'package:animations/consts/app_assets.dart';
+import 'package:animations/pages/bounce_animation/bounce_animation_page.dart';
+import 'package:animations/wids/page_router_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -27,7 +29,10 @@ class _AvarageAnimationsPageState extends State<AvarageAnimationsPage> {
             child: Lottie.asset(MyAnimation.lost_connection, width: 200)),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context)
+              .push(PageRouterWidget(wid: const BounceAnimationPage()));
+        },
         label: Text(_args['args'] ?? 'hello'),
       ),
     );

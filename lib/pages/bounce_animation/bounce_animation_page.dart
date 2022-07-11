@@ -51,6 +51,7 @@ class _BounceAnimationPageState extends State<BounceAnimationPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SafeArea(
         child: Center(
             child: AnimatedBuilder(
