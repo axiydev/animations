@@ -1,4 +1,5 @@
 import 'package:animations/pages/advance_animations_page/advance_animations_page.dart';
+import 'package:animations/pages/animated_wid/animated_wid_page.dart';
 import 'package:animations/pages/animations_page/animations_page.dart';
 import 'package:animations/pages/avarage_animations_page/avarage_animations_page.dart';
 import 'package:animations/pages/basic_animations_page.dart';
@@ -37,8 +38,9 @@ class MyApp extends StatelessWidget {
         ThreeDFlipPage.path: (context) => const ThreeDFlipPage(),
         HingeAnimationsPage.path: (context) => const HingeAnimationsPage(),
         BlurPage.path: (context) => BlurPage.show!,
+        CustomAnimatedPage.path: (context) => const CustomAnimatedPage()
       },
-      initialRoute: BlurPage.path,
+      initialRoute: CustomAnimatedPage.path,
     );
   }
 }
