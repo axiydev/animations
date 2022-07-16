@@ -25,8 +25,8 @@ class _AvarageAnimationsPageState extends State<AvarageAnimationsPage> {
     return Scaffold(
       appBar: AppBar(),
       body: SafeArea(
-        child: Center(
-            child: Lottie.asset(MyAnimation.lost_connection, width: 200)),
+        child:
+            Center(child: Lottie.asset(MyAnimation.lostConnection, width: 200)),
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {

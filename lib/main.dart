@@ -12,10 +12,12 @@ import 'package:animations/pages/basic_animations_page.dart';
 import 'package:animations/pages/blur_page/blur_page.dart';
 import 'package:animations/pages/bounce_animation/bounce_animation_page.dart';
 import 'package:animations/pages/hinge/hinge_page.dart';
+import 'package:animations/pages/moon_page/moon_page.dart';
 import 'package:animations/pages/three_flip/three_flip_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -38,9 +40,10 @@ class MyApp extends StatelessWidget {
         ThreeDFlipPage.path: (context) => const ThreeDFlipPage(),
         HingeAnimationsPage.path: (context) => const HingeAnimationsPage(),
         BlurPage.path: (context) => BlurPage.show!,
-        CustomAnimatedPage.path: (context) => const CustomAnimatedPage()
+        CustomAnimatedPage.path: (context) => const CustomAnimatedPage(),
+        MoonPage.path: (context) => const MoonPage()
       },
-      initialRoute: CustomAnimatedPage.path,
+      initialRoute: MoonPage.path,
     );
   }
 }
